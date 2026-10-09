@@ -1,18 +1,108 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f0f2f5;
+.app {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.app h1 {
+  margin: 0 0 24px;
+  font-size: 1.75rem;
+  color: #2d3436;
+}
+
+.search {
   display: flex;
-  justify-content: center;
-  padding-top: 60px;
+  gap: 10px;
 }
-input {
-  padding: 8px;
-  margin-right: 6px;
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
 }
+
+.search input:focus {
+  border-color: #6c5ce7;
+}
+
+.search button {
+  padding: 12px 20px;
+  background: #6c5ce7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #5b4bd6;
+}
+
+.message {
+  margin: 20px 0 0;
+  color: #636e72;
+}
+
+.error {
+  color: #d63031;
+}
+
 .card {
-  background: white;
-  padding: 16px;
-  margin-top: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+  padding: 24px 20px;
+  background: #f1f2f6;
+  border-radius: 14px;
+}
+
+.card p {
+  margin: 0;
+  color: #2d3436;
+}
+
+.temp {
+  margin-bottom: 8px !important;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.place {
+  margin-bottom: 8px !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #636e72 !important;
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 24px 12px;
+  }
+
+  .app {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .app h1 {
+    font-size: 1.5rem;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+
+  .search button {
+    width: 100%;
+  }
+
+  .temp {
+    font-size: 2.5rem;
+  }
 }
